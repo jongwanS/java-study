@@ -4,7 +4,18 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class ArrayList_LinkedList {
+	/**
+	1. 순차적으로 넣으면 list, linkedlist 비슷
+	2. 중간에 원소를 삽입할경우 linkedlist 훨 속도좋음.
+	  > list : 새로운 array 생성후, 신규 array에 데이터 복사해줌
+	  > linkedlist : 중간에 노드를 생성후 추가해줌
 	
+	linkedList 순차삽입:131
+	arrayList 순차삽입:119
+	=============================
+	linkedList 중간삽입:3
+	arrayList 중간삽입:1718
+	*/
 	static LinkedList<Integer> linkedList = new LinkedList<>();
 	static ArrayList<Integer> arrayList = new ArrayList<>();
 	
