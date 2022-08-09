@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.joining;
@@ -75,5 +77,14 @@ public class pratice {
         //전체트랜잭션 최소값
         Optional<Integer> low = transactions.stream().map(Transaction::getYear).reduce(Integer::min);
         System.out.println(low.get());
+
+        IntStream evenNumbers = IntStream.rangeClosed(1, 100)
+                .filter(n-> n%2 == 0);
+        System.out.println(evenNumbers.count());
+
+        Stream<String> strea = Stream.of("Modern","Java","In","Action");
+        strea.map(String::toUpperCase).forEach(System.out::println);
+
+
     }
 }

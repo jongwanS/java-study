@@ -22,6 +22,7 @@ public class CH3TEST {
             new Dish("parawns",false,300,Dish.Type.FISH),
             new Dish("salmon",true,450,Dish.Type.FISH)
         );
+        //함수형 인터페이스는 오직 하나의 추상메서드만을 지정한다.
         List<String> threeHighCaloricDishNames = menu.stream()
                                                     .filter(dish -> dish.getCalories() < 310)
                                                     .map(Dish::getName)
